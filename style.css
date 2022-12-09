@@ -45,31 +45,38 @@
     height: 100vh;
     width: 100vw;
     opacity: 0;
-    animation: core 0s linear 7s forwards;
+    animation: core 0s linear 5s forwards;
   }
   
   .logo {
     position: absolute;
-    animation: logo 12s linear 7s forwards;
+    height: 400px;
+    animation: logo 5s linear 5s forwards;
   }
   
   .content {
     color: #c98d06;
     font-size: 118px;
-    font-family: Univers;
+    
     width: 930px;
     opacity: 0;
-    animation: crawl 90s linear 15s forwards, fade 10s linear 80s forwards;
+    animation: crawl 90s linear 10s forwards, fade 10s linear 80s forwards;
     transform-origin: center;
   }
   
   .title {
     text-align: center;
     margin-bottom: 160px;
+    font-family:'zen dots' ;
+    color:#e3d081 ;
   }
   
   .text {
-    text-align: justify;
+    font-family: 'chivo';
+    text-align: justify-all;
+    word-wrap: break-word;
+    color:#f0e6bc;
+    font-size: 100px;
   }
   
   @keyframes intro {
