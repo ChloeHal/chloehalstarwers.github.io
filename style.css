@@ -1,22 +1,22 @@
-@font-face {
-    font-family: NewsGothic;
-    src: url(fonts/NewsGothic.otf);
-  }
+
   
   @font-face {
-    font-family: Univers;
-    src: url(fonts/Univers.otf);
+    font-family: Montserrat;
+    src: url(fonts/Montserrat.otf);
   }
   
+ 
+  
   body {
-    background-image: url('night.jpg');
-    background-size: cover;
+    background-color: #000;
     overflow: hidden;
     user-select: none;
   }
   
   main,
   .core {
+    background-image: url('./milky.jpg');
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,16 +29,18 @@
   }
   
   .intro {
-    font-family: 'Montserrat';
+    font-family: 'zen dots';
     font-size: 2.5rem;
-    color: #c3b7cd;
+    letter-spacing: 2px;
+    color: #e3d081;
     opacity: 0;
-    animation: intro 3s;
-    text-align: center;
+    animation: intro 5s;
+    max-width: 600px;
+    
   }
   
   .core {
-    background-image: url('night.jpg');
+    background-image: url('./milky.jpg');
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -55,19 +57,19 @@
     color: #c98d06;
     font-size: 118px;
     font-family: Univers;
-    width: 1000px;
+    width: 930px;
     opacity: 0;
-    animation: crawl 90s linear 15s forwards;
+    animation: crawl 90s linear 15s forwards, fade 10s linear 80s forwards;
     transform-origin: center;
   }
   
   .title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 160px;
   }
   
   .text {
-    text-align-last: justify;
+    text-align: justify;
   }
   
   @keyframes intro {
@@ -112,5 +114,15 @@
     100% {
       transform: perspective(75vmax) rotateX(75deg) translateY(-3000px) translateZ(-200px);
       opacity: 1;
+    }
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
     }
   }
